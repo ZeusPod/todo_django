@@ -26,3 +26,28 @@ de descargar , clonar o copiar para tus practicas
 <img src="https://raw.githubusercontent.com/github/explore/7456fdff59816d37ef383a6c8f32a26ff7332db2/topics/django/django.png"  width=10% height=10%>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"  width=10% height=10%>
 </p>
+
+
+
+### Comandos basicos 
+
+
+arrancar el server:
+    - python manage.py runserver 
+
+migraciones:
+    - python manage.py makemigrations
+    - python manage.py migrate
+
+
+### Agregar un archivo .env con las configuraciones basicas de la base de datos preferida 
+
+ejemplo: 
+
+    DB_NAME = todo 
+    DB_USER = your_user
+    DB_PASSWORD = your_password
+    DB_HOST = localhost
+    DB_PORT = 5432
+
+
