@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- cards -->
-<div class="container text-center">
+<div class="container text-center mx-5">
     <h1 class="text-center">Mis Todo's</h1>
     <div class="container m-4">
 
@@ -12,9 +12,9 @@
         </button>
     </div>
     <hr>
-    <div class="row">
+    <div class="row mx-4 mb-4">
         {% for t in task %}
-        <div class="col col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4 mb-4 mx-auto">
             <div class="card shadow-lg p-1 mb-4 bg-white rounded h-100" style="width: 18rem;">
                 <div class="card-body bg-{{t.color}} ">
                     <h5 class="card-title "> {{ t.title }} <i class="bi bi-journals"></i></h5>
@@ -31,7 +31,7 @@
                             {% csrf_token %}
                             <input type="hidden" name="task_id" value="{{ t.id }}">
                             <button type="button" class="btn btn-warning mx-4" data-bs-toggle="modal" data-bs-target="#editModal{{ t.id }}">Editar</button>
-
+                        </form>
                         <form action="{% url 'todo:delete_task' t.id %}" method="post" class="mx-4" id="delete_form_{{t.id}}">
                             {% csrf_token %}
                             <button type="button" class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#confirmModal_{{t.id}}">Eliminar</button>
